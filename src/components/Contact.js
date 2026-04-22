@@ -5,7 +5,7 @@ function Contact() {
     <section id="contact" className="section">
       <h2>Contact</h2>
 
-      <p>Email: your@email.com</p>
+      <p>Email: brayboyjustice@gmail.com</p>
 
       <div className="contact-links">
         <Button text="GitHub" link="https://github.com/j3stice" />
