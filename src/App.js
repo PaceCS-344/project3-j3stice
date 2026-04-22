@@ -1,20 +1,22 @@
 import "./App.css";
-import About from "./components/about";
-import Navbar from "./components/navbar";
-import Projects from "./components/projects";
-import Skills from "./components/skills";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Hero />
       <About />
       <Skills />
       <Projects />
-      <Contacts />
+      <Contact />
     </div>
   );
 }
 
 export default App;
-
