@@ -1,26 +1,41 @@
+import { useEffect, useState } from "react";
+import RepoModal from "./RepoModal";
 
-function Projects() {
+function Projects({ searchTerm }) {
+  const [repos, setRepos] = useState([]);
+  const [selectedRepo, setSelectedRepo] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/j3stice/repos?sort=updated")
+      .then((res) => res.json())
+      .then((data) => setRepos(data.slice(0, 6)));
+  }, []);
+
+  const filteredRepos = repos.filter((repo) =>
+    repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (repo.language && repo.language.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
   return (
     <section id="projects" className="section">
-      <h2>Projects</h2>
+      <h2>Live GitHub Projects</h2>
 
-      <div className="project">
-        <h3>Store API Security Project</h3>
-        <p>
-          Developed a FastAPI REST API featuring JWT authentication,
-          role-based authorization, protected CRUD endpoints,
-          and MariaDB database integration.
-        </p>
-        <p><em>Private academic repository available upon request.</em></p>
-      </div>
+      {filteredRepos.map((repo) => (
+        <div
+          className="project"
+          key={repo.id}
+          onClick={() => setSelectedRepo(repo)}
+        >
+          <h3>{repo.name}</h3>
+          <p>{repo.description || "No description available."}</p>
+          <p><strong>Language:</strong> {repo.language || "Not specified"}</p>
+          <a href={repo.html_url} target="_blank" rel="noreferrer">
+            View on GitHub
+          </a>
+        </div>
+      ))}
 
-      <div className="project">
-        <h3>Personal Portfolio Website</h3>
-        <p>
-          Designed and developed a responsive portfolio website using React
-          components, reusable styling, and interactive UI elements.
-        </p>
-      </div>
+      <RepoModal repo={selectedRepo} onClose={() => setSelectedRepo(null)} />
     </section>
   );
 }

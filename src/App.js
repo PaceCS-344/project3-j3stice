@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -7,13 +8,15 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div>
-      <Navbar />
+      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <Hero />
       <About />
       <Skills />
-      <Projects />
+      <Projects searchTerm={searchTerm} />
       <Contact />
     </div>
   );
