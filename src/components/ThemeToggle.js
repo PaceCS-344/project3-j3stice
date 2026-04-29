@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function ThemeToggle() {
   const [dark, setDark] = useState(true);
@@ -8,8 +8,8 @@ function ThemeToggle() {
   }, [dark]);
 
   return (
-    <button className="btn" onClick={() => setDark(!dark)}>
-      {dark ? "Light Mode" : "Dark Mode"}
+    <button className="theme-btn" onClick={() => setDark(!dark)}>
+      {dark ? "☀ Light Theme" : "🌙 Dark Theme"}
     </button>
   );
 }
