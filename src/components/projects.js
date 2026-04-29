@@ -1,23 +1,23 @@
-import Button from "./Button";
-
 function Projects() {
   return (
     <section id="projects" className="section">
       <h2>Projects</h2>
 
       <div className="project">
-        <h3>Store API</h3>
+        <h3>Store API Security Project</h3>
         <p>
-          Built a secure REST API with JWT authentication, role-based access,
-          and MariaDB integration.
+          Developed a FastAPI REST API featuring JWT authentication,
+          role-based authorization, protected CRUD endpoints,
+          and MariaDB database integration.
         </p>
-        <Button text="View Code" link="https://github.com/j3stice/project2" />
+        <p><em>Private academic repository available upon request.</em></p>
       </div>
 
       <div className="project">
-        <h3>Portfolio Website</h3>
+        <h3>Personal Portfolio Website</h3>
         <p>
-          Designed and developed a personal portfolio using React.
+          Designed and developed a responsive portfolio website using React
+          components, reusable styling, and interactive UI elements.
         </p>
       </div>
     </section>
