@@ -8,7 +8,7 @@ function Projects({ searchTerm }) {
   useEffect(() => {
     fetch("https://api.github.com/users/j3stice/repos?sort=updated")
       .then((res) => res.json())
-      .then((data) => setRepos(data.slice(0, 6)));
+      .then((data) => setRepos(data.slice(0, 5)));
   }, []);
 
   const filteredRepos = repos.filter((repo) =>
@@ -17,8 +17,8 @@ function Projects({ searchTerm }) {
   );
 
   return (
-    <section id="projects" className="section">
-      <h2>Live GitHub Projects</h2>
+    <section id="projects">
+      <h2>Featured GitHub Work</h2>
 
       {filteredRepos.map((repo) => (
         <div
@@ -26,12 +26,22 @@ function Projects({ searchTerm }) {
           key={repo.id}
           onClick={() => setSelectedRepo(repo)}
         >
-          <h3>{repo.name}</h3>
-          <p>{repo.description || "No description available."}</p>
-          <p><strong>Language:</strong> {repo.language || "Not specified"}</p>
-          <a href={repo.html_url} target="_blank" rel="noreferrer">
-            View on GitHub
-          </a>
+          <div className="project-top">
+            <h3>{repo.name}</h3>
+            <span className="repo-status">LIVE</span>
+          </div>
+
+          <p>{repo.description || "Repository showcasing active development work."}</p>
+
+          <div className="project-bottom">
+            <span className="language-pill">
+              {repo.language || "Codebase"}
+            </span>
+
+            <a href={repo.html_url} target="_blank" rel="noreferrer">
+              GitHub ↗
+            </a>
+          </div>
         </div>
       ))}
 

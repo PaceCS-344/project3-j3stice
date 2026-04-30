@@ -1,15 +1,25 @@
-import Button from "./Button";
-
 function Contact() {
   return (
-    <section id="contact" className="section">
-      <h2>Contact</h2>
+    <section id="contact" className="contact-panel reveal">
+      <h2>Let’s Build Something Great.</h2>
 
-      <p>Email: brayboyjustice@gmail.com</p>
+      <p>
+        Whether you're looking for a developer, collaborator, or someone to bring
+        ambitious ideas to life, I'm always open to discussing new opportunities.
+      </p>
 
-      <div className="contact-links">
-        <Button text="GitHub" link="https://github.com/j3stice" />
-        <Button text="LinkedIn" link="https://linkedin.com/in/justice-brayboy" />
+      <div className="contact-buttons">
+        <a href="mailto:brayboyjustice@gmail.com">
+          <button className="btn">Email Me</button>
+        </a>
+
+        <a href="https://github.com/j3stice" target="_blank" rel="noreferrer">
+          <button className="btn-outline">GitHub</button>
+        </a>
+
+        <a href="https://linkedin.com/in/justice-brayboy" target="_blank" rel="noreferrer">
+          <button className="btn-outline">LinkedIn</button>
+        </a>
       </div>
     </section>
   );

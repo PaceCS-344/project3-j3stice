@@ -5,16 +5,23 @@ function RepoModal({ repo, onClose }) {
       <div className="modal-overlay" onClick={onClose}>
         <div className="repo-modal" onClick={(e) => e.stopPropagation()}>
           <h2>{repo.name}</h2>
-          <p>{repo.description}</p>
-          <p><strong>Language:</strong> {repo.language}</p>
-          <p><strong>Stars:</strong> {repo.stargazers_count}</p>
-          <p><strong>Watchers:</strong> {repo.watchers_count}</p>
-          <p><strong>Open Issues:</strong> {repo.open_issues_count}</p>
+  
+          <p className="repo-description">
+            {repo.description || "This repository contains actively maintained development work."}
+          </p>
+  
+          <div className="repo-stats">
+            <div><span>Language</span><p>{repo.language || "N/A"}</p></div>
+            <div><span>Stars</span><p>{repo.stargazers_count}</p></div>
+            <div><span>Watchers</span><p>{repo.watchers_count}</p></div>
+            <div><span>Issues</span><p>{repo.open_issues_count}</p></div>
+          </div>
+  
           <a href={repo.html_url} target="_blank" rel="noreferrer">
-            View Repository
+            <button className="btn">Open Repository</button>
           </a>
-          <br /><br />
-          <button className="btn" onClick={onClose}>Close</button>
+  
+          <button className="btn-outline close-btn" onClick={onClose}>Close</button>
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import Skills from "./Skills";
 
 function FeaturedSection({ searchTerm }) {
   return (
-    <section className="featured-grid">
+    <section className="featured-grid reveal">
       <div className="featured-left">
         <Skills />
       </div>
