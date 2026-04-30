@@ -17,7 +17,9 @@ function Hero() {
   return (
     <section className="premium-hero">
       <div className="hero-left">
-        <p className="hero-tag">SOFTWARE ENGINEER • FULL STACK DEVELOPER</p>
+        <p className="hero-tag">JUSTICE BRAYBOY • SOFTWARE ENGINEER</p>
+
+        <h4 className="hero-name-intro">Designing scalable software with modern precision.</h4>
 
         <h1>
           Crafting <span>{phrases[currentPhrase]}</span>

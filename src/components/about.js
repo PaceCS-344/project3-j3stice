@@ -4,10 +4,10 @@ function About() {
       <div className="about-left">
         <h2>About Me</h2>
         <p>
-          I’m Justice Brayboy, a software engineer focused on full stack
-          application development, backend security, and premium user interface
-          design. My work centers around building scalable systems that not only
-          function efficiently, but also deliver polished user experiences.
+          I’m Justice Brayboy, a full stack software engineer specializing in backend
+          architecture, secure API development, and high-end web interface design.
+          My focus is creating systems that perform reliably, scale intelligently,
+          and deliver clean, memorable user experiences.
         </p>
       </div>
 
