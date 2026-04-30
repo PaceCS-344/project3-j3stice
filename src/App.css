@@ -842,3 +842,20 @@ body.light .repo-stats div {
 body.light .hero-name-intro {
   color: #444;
 }
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-name {
+  color: #d6d6d6;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+body.light .logo-name {
+  color: #333;
+}

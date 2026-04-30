@@ -44,7 +44,10 @@ function Navbar({ searchTerm, setSearchTerm }) {
 
   return (
     <nav className="navbar">
+    <a href="#top" className="logo-block">
       <h2 className="logo">JB.</h2>
+      <span className="logo-name">Justice Brayboy</span>
+    </a>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <a className={activeSection === "about" ? "active-nav" : ""} href="#about">About</a>

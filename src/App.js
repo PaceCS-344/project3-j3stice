@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div id="top">
       <Loader />
       <div
         className="scroll-progress"
