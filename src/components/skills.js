@@ -1,14 +1,32 @@
 function Skills() {
+  const skills = [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express.js",
+    "Python",
+    "FastAPI",
+    "Git",
+    "GitHub",
+    "REST APIs",
+    "MySQL"
+  ];
+
   return (
-    <section id="skills" className="section">
-      <h2>Technical Skills</h2>
-      <ul className="skills-list">
-        <li>Frontend Development: React, JavaScript, HTML, CSS</li>
-        <li>Backend Development: Python, FastAPI</li>
-        <li>Database Management: SQL, MariaDB, MySQL</li>
-        <li>API Design: RESTful Services, Authentication</li>
-        <li>Version Control: Git, GitHub</li>
-      </ul>
+    <section id="skills" className="skills-panel">
+      <h2>Skills</h2>
+
+      <div className="skills-grid">
+        {skills.map((skill, index) => (
+          <div key={index} className="skill-tile">
+            {skill}
+          </div>
+        ))}
+      </div>
+
+      <p className="skills-footer">Always learning something new 🚀</p>
     </section>
   );
 }
