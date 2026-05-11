@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Employer-Ready-Portfolio/static/css/main.590760b1.css",
-    "main.js": "/Employer-Ready-Portfolio/static/js/main.74926c41.js",
+    "main.js": "/Employer-Ready-Portfolio/static/js/main.4ab3a651.js",
     "static/media/justice-pro.png": "/Employer-Ready-Portfolio/static/media/justice-pro.7bff86f0a06f01004791.png",
     "index.html": "/Employer-Ready-Portfolio/index.html",
     "main.590760b1.css.map": "/Employer-Ready-Portfolio/static/css/main.590760b1.css.map",
-    "main.74926c41.js.map": "/Employer-Ready-Portfolio/static/js/main.74926c41.js.map"
+    "main.4ab3a651.js.map": "/Employer-Ready-Portfolio/static/js/main.4ab3a651.js.map"
   },
   "entrypoints": [
     "static/css/main.590760b1.css",
-    "static/js/main.74926c41.js"
+    "static/js/main.4ab3a651.js"
   ]
 }
