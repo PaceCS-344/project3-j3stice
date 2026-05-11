@@ -36,7 +36,11 @@ function Hero() {
             <button className="btn">View My Work</button>
           </a>
 
-          <a href="/public/JusticeBrayboyResume.pdf" target="_blank" rel="noreferrer">
+          <a
+            href={`${process.env.PUBLIC_URL}/JusticeBrayboyResume.pdf`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="btn-outline">Resume</button>
           </a>
         </div>
